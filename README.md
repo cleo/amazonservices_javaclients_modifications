@@ -12,24 +12,43 @@ Changed include
 
 Generates executable jar files with dependencies.
 
-Step 1: 
+### Step 1: 
 Clone your project in a separate folder
 (note: replace ORGANIZATION and PROJECT)
 
+```
 $ git clone git@github.com:ORGANIZATION/PROJECT.git
+```
+
 Example :
+
+```
 $ git clone git@github.com:cleo/amazonservices_javaclients_modifications.git
+```
 
-Step 2:
+### Step 2:
 Go into the project folder where pom.xml file resides
+
+```
 $ cd my-projectName
+```
+
 Example : 
+
+```
 $ cd <project_path>/amazonservices_javaclients_modifications/ext-lib-amazon-mws-modifications
+```
 
-Step 3:
+### Step 3:
 Just build it!
-$ mvn clean package
 
-Step 4:
+```
+$ mvn clean package
+```
+
+### Step 4:
 And see what you got!
+
+```
 $ dir target 
+```
