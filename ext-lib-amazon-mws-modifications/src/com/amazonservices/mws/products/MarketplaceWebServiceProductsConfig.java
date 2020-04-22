@@ -38,7 +38,7 @@ public class MarketplaceWebServiceProductsConfig {
      *
      * @return A clone of the configured connection.
      */
-    MwsConnection copyConnection() {
+     MwsConnection copyConnection() {
         return cc.clone();
     }
 

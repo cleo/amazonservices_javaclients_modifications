@@ -15,192 +15,197 @@
  */
 package com.amazonservices.mws.products;
 
+import com.amazonservices.mws.products.MarketplaceWebServiceProductsException;
 import com.amazonservices.mws.products.model.*;
 import com.amazonservices.mws.client.*;
 
 public class MarketplaceWebServiceProductsClient implements MarketplaceWebServiceProducts {
 
-    private static final String libraryName = "MarketplaceWebServiceProducts";
+	private static final String libraryName = "MarketplaceWebServiceProducts";
 
-    private static final String libraryVersion = "2017-03-22";
+	private static final String libraryVersion = "2017-03-22";
 
-    protected String servicePath;
+	protected String servicePath;
 
-    protected final MwsConnection connection;
+	protected final MwsConnection connection;
 
-    public MarketplaceWebServiceProductsClient(
-            String accessKey,
-            String secretKey,
-            String applicationName,
-            String applicationVersion,
-            MarketplaceWebServiceProductsConfig config) {
-        connection = config.copyConnection();
-        connection.setAwsAccessKeyId(accessKey);
-        connection.setAwsSecretKeyId(secretKey);
-        connection.setApplicationName(applicationName);
-        connection.setApplicationVersion(applicationVersion);
-        connection.setLibraryVersion(libraryVersion);
-        servicePath = config.getServicePath();
-    }
+	public MarketplaceWebServiceProductsClient(String accessKey, String secretKey, String applicationName,
+			String applicationVersion, MarketplaceWebServiceProductsConfig config) {
+		connection = config.copyConnection();
+		connection.setAwsAccessKeyId(accessKey);
+		connection.setAwsSecretKeyId(secretKey);
+		connection.setApplicationName(applicationName);
+		connection.setApplicationVersion(applicationVersion);
+		connection.setLibraryVersion(libraryVersion);
+		servicePath = config.getServicePath();
+	}
 
-    public MarketplaceWebServiceProductsClient(
-            String accessKey,
-            String secretKey,
-            MarketplaceWebServiceProductsConfig config) {
-        this(accessKey, secretKey, libraryName, libraryVersion, config);
-    }
+	public MarketplaceWebServiceProductsClient(String accessKey, String secretKey,
+			MarketplaceWebServiceProductsConfig config) {
+		this(accessKey, secretKey, libraryName, libraryVersion, config);
+	}
 
-    public MarketplaceWebServiceProductsClient(
-            String accessKey,
-            String secretKey,
-            String applicationName,
-            String applicationVersion) {
-        this(accessKey, secretKey, applicationName, 
-                applicationVersion, new MarketplaceWebServiceProductsConfig());
-    }
+	public MarketplaceWebServiceProductsClient(String accessKey, String secretKey, String applicationName,
+			String applicationVersion) {
+		this(accessKey, secretKey, applicationName, applicationVersion, new MarketplaceWebServiceProductsConfig());
+	}
 
-    public GetCompetitivePricingForASINResponse getCompetitivePricingForASIN(GetCompetitivePricingForASINRequest request) {
-        return connection.call(
-            new RequestType("GetCompetitivePricingForASIN", GetCompetitivePricingForASINResponse.class, servicePath),
-            request);
-    }
+	public GetCompetitivePricingForASINResponse getCompetitivePricingForASIN(
+			GetCompetitivePricingForASINRequest request) {
+		return connection.call(new RequestType("GetCompetitivePricingForASIN",
+				GetCompetitivePricingForASINResponse.class, servicePath), request);
+	}
 
-    public GetCompetitivePricingForSKUResponse getCompetitivePricingForSKU(GetCompetitivePricingForSKURequest request) {
-        return connection.call(
-            new RequestType("GetCompetitivePricingForSKU", GetCompetitivePricingForSKUResponse.class, servicePath),
-            request);
-    }
+	public GetCompetitivePricingForSKUResponse getCompetitivePricingForSKU(GetCompetitivePricingForSKURequest request) {
+		return connection.call(
+				new RequestType("GetCompetitivePricingForSKU", GetCompetitivePricingForSKUResponse.class, servicePath),
+				request);
+	}
 
-    public GetLowestOfferListingsForASINResponse getLowestOfferListingsForASIN(GetLowestOfferListingsForASINRequest request) {
-        return connection.call(
-            new RequestType("GetLowestOfferListingsForASIN", GetLowestOfferListingsForASINResponse.class, servicePath),
-            request);
-    }
+	public GetLowestOfferListingsForASINResponse getLowestOfferListingsForASIN(
+			GetLowestOfferListingsForASINRequest request) {
+		return connection.call(new RequestType("GetLowestOfferListingsForASIN",
+				GetLowestOfferListingsForASINResponse.class, servicePath), request);
+	}
 
-    public GetLowestOfferListingsForSKUResponse getLowestOfferListingsForSKU(GetLowestOfferListingsForSKURequest request) {
-        return connection.call(
-            new RequestType("GetLowestOfferListingsForSKU", GetLowestOfferListingsForSKUResponse.class, servicePath),
-            request);
-    }
+	public GetLowestOfferListingsForSKUResponse getLowestOfferListingsForSKU(
+			GetLowestOfferListingsForSKURequest request) {
+		return connection.call(new RequestType("GetLowestOfferListingsForSKU",
+				GetLowestOfferListingsForSKUResponse.class, servicePath), request);
+	}
 
-    public GetLowestPricedOffersForASINResponse getLowestPricedOffersForASIN(GetLowestPricedOffersForASINRequest request) {
-        return connection.call(
-            new RequestType("GetLowestPricedOffersForASIN", GetLowestPricedOffersForASINResponse.class, servicePath),
-            request);
-    }
+	public GetLowestPricedOffersForASINResponse getLowestPricedOffersForASIN(
+			GetLowestPricedOffersForASINRequest request) {
+		return connection.call(new RequestType("GetLowestPricedOffersForASIN",
+				GetLowestPricedOffersForASINResponse.class, servicePath), request);
+	}
 
-    public GetLowestPricedOffersForSKUResponse getLowestPricedOffersForSKU(GetLowestPricedOffersForSKURequest request) {
-        return connection.call(
-            new RequestType("GetLowestPricedOffersForSKU", GetLowestPricedOffersForSKUResponse.class, servicePath),
-            request);
-    }
+	public GetLowestPricedOffersForSKUResponse getLowestPricedOffersForSKU(GetLowestPricedOffersForSKURequest request) {
+		return connection.call(
+				new RequestType("GetLowestPricedOffersForSKU", GetLowestPricedOffersForSKUResponse.class, servicePath),
+				request);
+	}
 
-    public GetMatchingProductResponse getMatchingProduct(GetMatchingProductRequest request) {
-        return connection.call(
-            new RequestType("GetMatchingProduct", GetMatchingProductResponse.class, servicePath),
-            request);
-    }
+	public GetMatchingProductResponse getMatchingProduct(GetMatchingProductRequest request) {
+		return connection.call(new RequestType("GetMatchingProduct", GetMatchingProductResponse.class, servicePath),
+				request);
+	}
 
-    public GetMatchingProductForIdResponse getMatchingProductForId(GetMatchingProductForIdRequest request) {
-        return connection.call(
-            new RequestType("GetMatchingProductForId", GetMatchingProductForIdResponse.class, servicePath),
-            request);
-    }
+	/*   *//**
+			 * Changed the GetMatchingProductRequest to
+			 * com.amazonaws.mws.model.GetMatchingProductRequest
+			 *//*
+				 * public GetMatchingProductResponse
+				 * getMatchingProduct(GetMatchingProductRequest request) { return
+				 * connection.call( new RequestType("GetMatchingProduct",
+				 * GetMatchingProductResponse.class, servicePath), request); }
+				 */
 
-    public GetMyFeesEstimateResponse getMyFeesEstimate(GetMyFeesEstimateRequest request) {
-        return connection.call(
-            new RequestType("GetMyFeesEstimate", GetMyFeesEstimateResponse.class, servicePath),
-            request);
-    }
+	public GetMatchingProductForIdResponse getMatchingProductForId(GetMatchingProductForIdRequest request) {
+		return connection.call(
+				new RequestType("GetMatchingProductForId", GetMatchingProductForIdResponse.class, servicePath),
+				request);
+	}
 
-    public GetMyPriceForASINResponse getMyPriceForASIN(GetMyPriceForASINRequest request) {
-        return connection.call(
-            new RequestType("GetMyPriceForASIN", GetMyPriceForASINResponse.class, servicePath),
-            request);
-    }
+	public GetMyFeesEstimateResponse getMyFeesEstimate(GetMyFeesEstimateRequest request) {
+		return connection.call(new RequestType("GetMyFeesEstimate", GetMyFeesEstimateResponse.class, servicePath),
+				request);
+	}
 
-    public GetMyPriceForSKUResponse getMyPriceForSKU(GetMyPriceForSKURequest request) {
-        return connection.call(
-            new RequestType("GetMyPriceForSKU", GetMyPriceForSKUResponse.class, servicePath),
-            request);
-    }
+	public GetMyPriceForASINResponse getMyPriceForASIN(GetMyPriceForASINRequest request) {
+		return connection.call(new RequestType("GetMyPriceForASIN", GetMyPriceForASINResponse.class, servicePath),
+				request);
+	}
 
-    public GetProductCategoriesForASINResponse getProductCategoriesForASIN(GetProductCategoriesForASINRequest request) {
-        return connection.call(
-            new RequestType("GetProductCategoriesForASIN", GetProductCategoriesForASINResponse.class, servicePath),
-            request);
-    }
+	/*	*//**
+			 * Changed the GetMyPriceForASINRequest to
+			 * com.amazonaws.mws.model.GetMatchingProductRequest
+			 *//*
+				 * public GetMyPriceForASINResponse
+				 * getMyPriceForASIN(com.amazonaws.mws.model.GetMyPriceForASINRequest request) {
+				 * return connection.call(new RequestType("GetMyPriceForASIN",
+				 * GetMyPriceForASINResponse.class, servicePath), request); }
+				 */
 
-    public GetProductCategoriesForSKUResponse getProductCategoriesForSKU(GetProductCategoriesForSKURequest request) {
-        return connection.call(
-            new RequestType("GetProductCategoriesForSKU", GetProductCategoriesForSKUResponse.class, servicePath),
-            request);
-    }
+	public GetMyPriceForSKUResponse getMyPriceForSKU(GetMyPriceForSKURequest request) {
+		return connection.call(new RequestType("GetMyPriceForSKU", GetMyPriceForSKUResponse.class, servicePath),
+				request);
+	}
 
-    public GetServiceStatusResponse getServiceStatus(GetServiceStatusRequest request) {
-        return connection.call(
-            new RequestType("GetServiceStatus", GetServiceStatusResponse.class, servicePath),
-            request);
-    }
+	public GetProductCategoriesForASINResponse getProductCategoriesForASIN(GetProductCategoriesForASINRequest request) {
+		return connection.call(
+				new RequestType("GetProductCategoriesForASIN", GetProductCategoriesForASINResponse.class, servicePath),
+				request);
+	}
 
-    public ListMatchingProductsResponse listMatchingProducts(ListMatchingProductsRequest request) {
-        return connection.call(
-            new RequestType("ListMatchingProducts", ListMatchingProductsResponse.class, servicePath),
-            request);
-    }
+	public GetProductCategoriesForSKUResponse getProductCategoriesForSKU(GetProductCategoriesForSKURequest request) {
+		return connection.call(
+				new RequestType("GetProductCategoriesForSKU", GetProductCategoriesForSKUResponse.class, servicePath),
+				request);
+	}
 
-    public static String quoteAppName(String s) {
-        return MwsUtl.escapeAppName(s);
-    }
+	public GetServiceStatusResponse getServiceStatus(GetServiceStatusRequest request) {
+		return connection.call(new RequestType("GetServiceStatus", GetServiceStatusResponse.class, servicePath),
+				request);
+	}
 
-    public static String quoteAppVersion(String s) {
-        return MwsUtl.escapeAppVersion(s);
-    }
+	public ListMatchingProductsResponse listMatchingProducts(ListMatchingProductsRequest request) {
+		return connection.call(new RequestType("ListMatchingProducts", ListMatchingProductsResponse.class, servicePath),
+				request);
+	}
 
-    public static String quoteAttributeName(String s) {
-        return MwsUtl.escapeAttributeName(s);
-    }
+	public static String quoteAppName(String s) {
+		return MwsUtl.escapeAppName(s);
+	}
 
-    public static String quoteAttributeValue(String s) {
-        return MwsUtl.escapeAttributeValue(s);
-    }
+	public static String quoteAppVersion(String s) {
+		return MwsUtl.escapeAppVersion(s);
+	}
 
-    protected static class RequestType implements MwsRequestType {
+	public static String quoteAttributeName(String s) {
+		return MwsUtl.escapeAttributeName(s);
+	}
 
-        private final String operationName;
-        private final Class<? extends MWSResponse> responseClass;
-        private final String servicePath;
+	public static String quoteAttributeValue(String s) {
+		return MwsUtl.escapeAttributeValue(s);
+	}
 
-        public RequestType(String operationName, Class<? extends MWSResponse> responseClass, String servicePath) {
-            this.operationName = operationName;
-            this.responseClass = responseClass;
-            this.servicePath = servicePath;
-        }
+	protected static class RequestType implements MwsRequestType {
 
-        @Override
-        public String getServicePath() {
-            return this.servicePath;
-        }
+		private final String operationName;
+		private final Class<? extends MWSResponse> responseClass;
+		private final String servicePath;
 
-        @Override
-        public String getOperationName() {
-            return this.operationName;
-        }
+		public RequestType(String operationName, Class<? extends MWSResponse> responseClass, String servicePath) {
+			this.operationName = operationName;
+			this.responseClass = responseClass;
+			this.servicePath = servicePath;
+		}
 
-        @Override
-        public Class<? extends MwsObject> getResponseClass() {
-            return this.responseClass;
-        }
+		@Override
+		public String getServicePath() {
+			return this.servicePath;
+		}
 
-        @Override
-        public MwsException wrapException(Throwable cause) {
-            return new MarketplaceWebServiceProductsException(cause);
-        }
+		@Override
+		public String getOperationName() {
+			return this.operationName;
+		}
 
-        @Override
-        public void setRHMD(MwsObject response, MwsResponseHeaderMetadata rhmd) {
-            ((MWSResponse)response).setResponseHeaderMetadata(new ResponseHeaderMetadata(rhmd));
-        }
-    }
+		@Override
+		public Class<? extends MwsObject> getResponseClass() {
+			return this.responseClass;
+		}
+
+		@Override
+		public MwsException wrapException(Throwable cause) {
+			return new MarketplaceWebServiceProductsException(cause);
+		}
+
+		@Override
+		public void setRHMD(MwsObject response, MwsResponseHeaderMetadata rhmd) {
+			((MWSResponse) response).setResponseHeaderMetadata(new ResponseHeaderMetadata(rhmd));
+		}
+	}
 
 }

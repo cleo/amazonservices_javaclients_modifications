@@ -15,6 +15,7 @@
  */
 package com.amazonservices.mws.products;
 
+import com.amazonservices.mws.products.MarketplaceWebServiceProductsException;
 import com.amazonservices.mws.products.model.*;
 
 /**
