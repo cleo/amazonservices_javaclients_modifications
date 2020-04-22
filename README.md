@@ -18,13 +18,13 @@ Clone your project in a separate folder
 
 $ git clone git@github.com:ORGANIZATION/PROJECT.git
 Example :
-$ git clone https://github.com/DasariArchana/amazonservices_javaclients_modifications.git
+$ git clone git@github.com:cleo/amazonservices_javaclients_modifications.git
 
 Step 2:
 Go into the project folder where pom.xml file resides
 $ cd my-projectName
 Example : 
-$ cd <project_path>/amazonservices_javaclients_modifications\ext-lib-amazon-mws-modifications>
+$ cd <project_path>/amazonservices_javaclients_modifications/ext-lib-amazon-mws-modifications
 
 Step 3:
 Just build it!
