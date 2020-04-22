@@ -1,10 +1,10 @@
 # amazonservices_javaclients_modifications
 
-Revision 0c21c194a45bdccf94b907ca4f738582b68dca8b
+Revision 77894e28fd7bac540413568edd5e0765f3e73637
 Includes files from the SDK without any modifications
 
 
-Revision d7492ecd618867e860f0e34e5eff103e0677ee35
+Revision dc7066db8265e79b9463aa8ecc1bf1021a9cda03
 Changed include 
 1. To return ResponseHeaderMetadata for Feed APIs 
 2. GetMyPriceForASIN API request to accept ItemCondition 
